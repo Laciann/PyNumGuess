@@ -1,5 +1,3 @@
-from __future__ import print_function
-from ast import While
 import random
 
 number_of_guesses = 0 
@@ -10,7 +8,7 @@ name = input("Your name? ")
 print("Hello", name + "! I have selected an integer number between 1 to 50. Take a guess! What must be it?")
 
 while number_of_guesses < 8:
-    guess = input("Enter your guess ")
+    guess = input("Enter your guess :: ")
     guess = int(guess)
 
     number_of_guesses = number_of_guesses + 1 
@@ -21,7 +19,7 @@ while number_of_guesses < 8:
         print("Guess is lower! You have " + guesses_left + " guesses left.")
 
     elif guess > number:
-        guessesLeft=str(guesses_left)
+        guesses_left= str(guesses_left)
         print("Guess is higher! You have " + guesses_left + " guesses left.")
 
     elif guess == number:
